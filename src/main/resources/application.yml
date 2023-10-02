@@ -21,15 +21,5 @@ spring:
           predicates:
             - Path=/users/**
             - Method=GET,POST
-eureka:
-  instance:
-    prefer-ip-address: true
-    #allow to use IP address for eureka server discovery
-  client:
-    fetch-registry: true
-    #allow this service to fetch eureka server
-    register-with-eureka: true
-    #will make the service a eureka client
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    #defining the eureka server location
+  config:
+    import: configserver:http://localhost:8085

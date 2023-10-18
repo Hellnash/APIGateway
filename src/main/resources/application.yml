@@ -23,3 +23,10 @@ spring:
             - Method=GET,POST
   config:
     import: configserver:http://localhost:8085
+okta:
+  oauth2:
+    issuer: https://dev-63065601.okta.com/oauth2/default
+    audience: api://default
+    client-id: 0oactnqoq4eXQjALS5d7
+    client-secret: FJdFbJ26ICjSNm7RK3o-dL1XRV4Ik_HYuRf0energSR3qTo9zXnCp7y-uLiCXaN2
+    scopes: openid, profile, email, offline_access
